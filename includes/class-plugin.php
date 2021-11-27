@@ -124,6 +124,27 @@ class Repacf_Plugin {
 		add_action( 'acf/include_field_types', array( $this, 'include_field_types' ), 5 );
 		add_action( 'acf/input/admin_enqueue_scripts', array( $this, 'input_admin_enqueue_scripts' ) );
 		add_action( 'acf/field_group/admin_enqueue_scripts', array( $this, 'field_group_admin_enqueue_scripts' ) );
+
+		add_filter( 'auto_update_plugin', array($this, 'auto_update'), 10, 2 );
+	}
+
+	/**
+	 * Enable auto update.
+	 *
+	 * @param boolean $update
+	 * @param object $item
+	 * @return boolean
+	 */
+	public function auto_update($update, $item) {
+		// Array of plugin slugs to always auto-update
+		$plugins = array (
+			'repeater-acf'
+		);
+		if ( in_array( $item->slug, $plugins ) ) {
+			return true;
+		} else {
+			return $update;
+		}
 	}
 
 

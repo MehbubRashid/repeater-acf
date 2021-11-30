@@ -12,7 +12,7 @@ Add and use repeater field in Advanced Custom Fields (ACF) free version.
 
 == Installation & Usage ==
 
-1. Upload `repeater-acf.php` to the `/wp-content/plugins/` directory
+1. Install the plugin
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. Now you should see repeater field enabled in ACF field group editor.
 

@@ -158,11 +158,11 @@ class Repacf_Plugin {
 	 * @return void
 	 */
 	public function admin_scripts() {
-		wp_register_script( 'repacf-field-group', REPACF_ASSETS_URL . 'js/acf-pro-field-group.js', array('jquery'), time(), true );
-		wp_register_script( 'repacf-input', REPACF_ASSETS_URL . 'js/acf-pro-input.js', array('jquery'), time(), true );
+		wp_register_script( 'repacf-field-group', REPACF_ASSETS_URL . 'js/repacf-field-group.js', array('jquery'), time(), true );
+		wp_register_script( 'repacf-input', REPACF_ASSETS_URL . 'js/repacf-input.js', array('jquery'), time(), true );
 
-		wp_register_style( 'repacf-field-group', REPACF_ASSETS_URL . 'css/acf-pro-field-group.css', array(), time() );
-		wp_register_style( 'repacf-input', REPACF_ASSETS_URL . 'css/acf-pro-input.css', array(), time() );
+		wp_register_style( 'repacf-field-group', REPACF_ASSETS_URL . 'css/repacf-field-group.css', array(), time() );
+		wp_register_style( 'repacf-input', REPACF_ASSETS_URL . 'css/repacf-input.css', array(), time() );
 	}
 
 
